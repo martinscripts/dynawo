@@ -2,17 +2,17 @@ within Dynawo.Examples.KundurTwoArea.Grid.BaseClasses;
 
 model Network "Kundur two-area system with buses, lines and transformers"
   /*
-    * Copyright (c) 2022, RTE (http://www.rte-france.com)
-    * See AUTHORS.txt
-    * All rights reserved.
-    * This Source Code Form is subject to the terms of the Mozilla Public
-    * License, v. 2.0. If a copy of the MPL was not distributed with this
-    * file, you can obtain one at http://mozilla.org/MPL/2.0/.
-    * SPDX-License-Identifier: MPL-2.0
-    *
-    * This file is part of Dynawo, an hybrid C++/Modelica open source suite
-    * of simulation tools for power systems.
-    */
+      * Copyright (c) 2022, RTE (http://www.rte-france.com)
+      * See AUTHORS.txt
+      * All rights reserved.
+      * This Source Code Form is subject to the terms of the Mozilla Public
+      * License, v. 2.0. If a copy of the MPL was not distributed with this
+      * file, you can obtain one at http://mozilla.org/MPL/2.0/.
+      * SPDX-License-Identifier: MPL-2.0
+      *
+      * This file is part of Dynawo, an hybrid C++/Modelica open source suite
+      * of simulation tools for power systems.
+      */
   Dynawo.Electrical.Buses.Bus bus01 annotation(
     Placement(visible = true, transformation(origin = {-240, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   Dynawo.Electrical.Buses.Bus bus07 annotation(
@@ -35,36 +35,28 @@ model Network "Kundur two-area system with buses, lines and transformers"
     Placement(visible = true, transformation(origin = {130, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Electrical.Buses.Bus bus09 annotation(
     Placement(visible = true, transformation(origin = {60, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Lines.Line line0506(BPu = bLinePu*lengthLine0506Km, GPu = 0, RPu = rLinePu*lengthLine0506Km, XPu = xLinePu*lengthLine0506Km)  annotation(
+  Dynawo.Electrical.Lines.Line line0506(BPu = bLinePu * lengthLine0506Km, GPu = 0, RPu = rLinePu * lengthLine0506Km, XPu = xLinePu * lengthLine0506Km) annotation(
     Placement(visible = true, transformation(origin = {-148, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line0607(BPu = bLinePu*lengthLine0607Km, GPu = 0, RPu = rLinePu*lengthLine0607Km, XPu = xLinePu*lengthLine0607Km) annotation(
+  Dynawo.Electrical.Lines.Line line0607(BPu = bLinePu * lengthLine0607Km, GPu = 0, RPu = rLinePu * lengthLine0607Km, XPu = xLinePu * lengthLine0607Km) annotation(
     Placement(visible = true, transformation(origin = {-90, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line0708b(BPu = bLinePu*lengthLine0708Km, GPu = 0, RPu = rLinePu*lengthLine0708Km, XPu = xLinePu*lengthLine0708Km) annotation(
+  Dynawo.Electrical.Lines.Line line0708b(BPu = bLinePu * lengthLine0708Km, GPu = 0, RPu = rLinePu * lengthLine0708Km, XPu = xLinePu * lengthLine0708Km) annotation(
     Placement(visible = true, transformation(origin = {-28, 64}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line0910(BPu = bLinePu*lengthLine0910Km, GPu = 0, RPu = rLinePu*lengthLine0910Km, XPu = xLinePu*lengthLine0910Km) annotation(
+  Dynawo.Electrical.Lines.Line line0910(BPu = bLinePu * lengthLine0910Km, GPu = 0, RPu = rLinePu * lengthLine0910Km, XPu = xLinePu * lengthLine0910Km) annotation(
     Placement(visible = true, transformation(origin = {94, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line0809a(BPu = bLinePu*lengthLine0809Km, GPu = 0, RPu = rLinePu*lengthLine0809Km, XPu = xLinePu*lengthLine0809Km) annotation(
+  Dynawo.Electrical.Lines.Line line0809a(BPu = bLinePu * lengthLine0809Km, GPu = 0, RPu = rLinePu * lengthLine0809Km, XPu = xLinePu * lengthLine0809Km) annotation(
     Placement(visible = true, transformation(origin = {32, 76}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line0708a(BPu = bLinePu*lengthLine0708Km, GPu = 0, RPu = rLinePu*lengthLine0708Km, XPu = xLinePu*lengthLine0708Km) annotation(
+  Dynawo.Electrical.Lines.Line line0708a(BPu = bLinePu * lengthLine0708Km, GPu = 0, RPu = rLinePu * lengthLine0708Km, XPu = xLinePu * lengthLine0708Km) annotation(
     Placement(visible = true, transformation(origin = {-28, 76}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line0809b(BPu = bLinePu*lengthLine0809Km, GPu = 0, RPu = rLinePu*lengthLine0809Km, XPu = xLinePu*lengthLine0809Km) annotation(
+  Dynawo.Electrical.Lines.Line line0809b(BPu = bLinePu * lengthLine0809Km, GPu = 0, RPu = rLinePu * lengthLine0809Km, XPu = xLinePu * lengthLine0809Km) annotation(
     Placement(visible = true, transformation(origin = {32, 64}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Lines.Line line1011(BPu = bLinePu*lengthLine1011Km, GPu = 0, RPu = rLinePu*lengthLine1011Km, XPu = xLinePu*lengthLine1011Km) annotation(
+  Dynawo.Electrical.Lines.Line line1011(BPu = bLinePu * lengthLine1011Km, GPu = 0, RPu = rLinePu * lengthLine1011Km, XPu = xLinePu * lengthLine1011Km) annotation(
     Placement(visible = true, transformation(origin = {154, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0105(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1)  annotation(
-    Placement(visible = true, transformation(origin = {-206, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0206(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
-    Placement(visible = true, transformation(origin = {-130, 18}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0410(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
-    Placement(visible = true, transformation(origin = {130, 18}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0311(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
-    Placement(visible = true, transformation(origin = {212, 70}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   // Transformer parameters
   final parameter Types.PerUnit xTrPu = 0.15 "Step-uptransformer reactance in pu (SnTr base)";
   final parameter Types.VoltageModule U1TrKv = 20 "Primary (low voltage) transformer voltage in kV";
   final parameter Types.VoltageModule U2TrKv = 230 "Secondary (high voltage) transformer voltage in kV";
   final parameter Types.ApparentPowerModule SnTr = 900 "Transformer rated power in MVA";
-  final parameter Types.PerUnit xTrSystemBasePu = xTrPu/SnTr*Dynawo.Electrical.SystemBase.SnRef "Step-uptransformer reactance in pu (system base SnRef)";
+  final parameter Types.PerUnit xTrSystemBasePu = xTrPu / SnTr * Dynawo.Electrical.SystemBase.SnRef "Step-uptransformer reactance in pu (system base SnRef)";
   // Line parameters
   final parameter Real lengthLine0506Km = 25;
   final parameter Real lengthLine0607Km = 10;
@@ -76,7 +68,14 @@ model Network "Kundur two-area system with buses, lines and transformers"
   final parameter Types.PerUnit xLinePu = 0.001 "Reactance in pu/km";
   final parameter Types.PerUnit bLinePu = 0.00175 "Susceptance in pu/km";
   final parameter Types.ApparentPowerModule SRLine = 100 "Line rated power in MVA";
-  
+  Dynawo.Electrical.Transformers.TransformerFixedRatio tr0105(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
+    Placement(visible = true, transformation(origin = {-208, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Dynawo.Electrical.Transformers.TransformerFixedRatio tr0206(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
+    Placement(visible = true, transformation(origin = {-130, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+  Dynawo.Electrical.Transformers.TransformerFixedRatio tr0410(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
+    Placement(visible = true, transformation(origin = {130, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+  Dynawo.Electrical.Transformers.TransformerFixedRatio tr0311(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
+    Placement(visible = true, transformation(origin = {212, 70}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
 equation
 //line_4032_4044.switchOffSignal1.value = false; // to be disconnected to clear short circuit
   connect(bus05.terminal, line0506.terminal1) annotation(
@@ -111,22 +110,6 @@ equation
     Line(points = {{164, 70}, {180, 70}}, color = {0, 0, 255}));
   connect(bus10.terminal, line1011.terminal1) annotation(
     Line(points = {{122, 70}, {144, 70}}, color = {0, 0, 255}));
-  connect(bus01.terminal, tr0105.terminal1) annotation(
-    Line(points = {{-240, 70}, {-216, 70}}, color = {0, 0, 255}));
-  connect(tr0105.terminal2, bus05.terminal) annotation(
-    Line(points = {{-196, 70}, {-178, 70}}, color = {0, 0, 255}));
-  connect(bus11.terminal, tr0311.terminal2) annotation(
-    Line(points = {{180, 70}, {202, 70}}, color = {0, 0, 255}));
-  connect(tr0311.terminal1, bus03.terminal) annotation(
-    Line(points = {{222, 70}, {240, 70}}, color = {0, 0, 255}));
-  connect(tr0410.terminal1, bus04.terminal) annotation(
-    Line(points = {{130, 8}, {130, -20}}, color = {0, 0, 255}));
-  connect(tr0206.terminal1, bus02.terminal) annotation(
-    Line(points = {{-130, 8}, {-130, -20}}, color = {0, 0, 255}));
-  connect(tr0206.terminal2, bus06.terminal) annotation(
-    Line(points = {{-130, 28}, {-130, 62}, {-120, 62}, {-120, 70}}, color = {0, 0, 255}));
-  connect(tr0410.terminal2, bus10.terminal) annotation(
-    Line(points = {{130, 28}, {130, 62}, {122, 62}, {122, 70}}, color = {0, 0, 255}));
 // Switchoff signals
 // Lines
   line0506.switchOffSignal1.value = false;
@@ -154,7 +137,24 @@ equation
   tr0311.switchOffSignal2.value = false;
   tr0410.switchOffSignal1.value = false;
   tr0410.switchOffSignal2.value = false;
-  annotation(preferredView = "diagram",
+  connect(bus01.terminal, tr0105.terminal1) annotation(
+    Line(points = {{-240, 70}, {-218, 70}}, color = {0, 0, 255}));
+  connect(tr0105.terminal2, bus05.terminal) annotation(
+    Line(points = {{-198, 70}, {-178, 70}}, color = {0, 0, 255}));
+  connect(tr0206.terminal1, bus02.terminal) annotation(
+    Line(points = {{-130, 8}, {-130, -20}}, color = {0, 0, 255}));
+  connect(tr0206.terminal2, bus06.terminal) annotation(
+    Line(points = {{-130, 28}, {-130, 64}, {-120, 64}, {-120, 70}}, color = {0, 0, 255}));
+  connect(tr0410.terminal1, bus04.terminal) annotation(
+    Line(points = {{130, 8}, {130, -20}}, color = {0, 0, 255}));
+  connect(tr0410.terminal2, bus10.terminal) annotation(
+    Line(points = {{130, 28}, {130, 64}, {122, 64}, {122, 70}}, color = {0, 0, 255}));
+  connect(bus03.terminal, tr0311.terminal1) annotation(
+    Line(points = {{240, 70}, {222, 70}}, color = {0, 0, 255}));
+  connect(tr0311.terminal2, bus11.terminal) annotation(
+    Line(points = {{202, 70}, {180, 70}}, color = {0, 0, 255}));
+  annotation(
+    preferredView = "diagram",
     Diagram(coordinateSystem(extent = {{-300, -100}, {300, 100}})),
     Icon(coordinateSystem(extent = {{-300, -100}, {300, 100}})));
 end Network;
