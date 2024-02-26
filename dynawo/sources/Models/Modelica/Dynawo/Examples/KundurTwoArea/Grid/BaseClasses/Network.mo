@@ -51,13 +51,13 @@ model Network "Kundur two-area system with buses, lines and transformers"
     Placement(visible = true, transformation(origin = {32, 64}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Dynawo.Electrical.Lines.Line line1011(BPu = bLinePu*lengthLine1011Km, GPu = 0, RPu = rLinePu*lengthLine1011Km, XPu = xLinePu*lengthLine1011Km) annotation(
     Placement(visible = true, transformation(origin = {154, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0105(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = U2TrKv/U1TrKv)  annotation(
+  Dynawo.Electrical.Transformers.GeneratorTransformer tr0105(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1)  annotation(
     Placement(visible = true, transformation(origin = {-206, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0206(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = U2TrKv/U1TrKv) annotation(
+  Dynawo.Electrical.Transformers.GeneratorTransformer tr0206(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
     Placement(visible = true, transformation(origin = {-130, 18}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0410(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = U2TrKv/U1TrKv) annotation(
+  Dynawo.Electrical.Transformers.GeneratorTransformer tr0410(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
     Placement(visible = true, transformation(origin = {130, 18}, extent = {{10, -10}, {-10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Transformers.GeneratorTransformer tr0311(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = U2TrKv/U1TrKv) annotation(
+  Dynawo.Electrical.Transformers.GeneratorTransformer tr0311(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
     Placement(visible = true, transformation(origin = {212, 70}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
   // Transformer parameters
   final parameter Types.PerUnit xTrPu = 0.15 "Step-uptransformer reactance in pu (SnTr base)";
@@ -127,8 +127,8 @@ equation
     Line(points = {{-130, 28}, {-130, 62}, {-120, 62}, {-120, 70}}, color = {0, 0, 255}));
   connect(tr0410.terminal2, bus10.terminal) annotation(
     Line(points = {{130, 28}, {130, 62}, {122, 62}, {122, 70}}, color = {0, 0, 255}));
-  // Switchoff signals
-  // Lines
+// Switchoff signals
+// Lines
   line0506.switchOffSignal1.value = false;
   line0506.switchOffSignal2.value = false;
   line0607.switchOffSignal1.value = false;
@@ -145,10 +145,14 @@ equation
   line0910.switchOffSignal2.value = false;
   line1011.switchOffSignal1.value = false;
   line1011.switchOffSignal2.value = false;
-  // Transformers
+// Transformers
   tr0105.switchOffSignal1.value = false;
+  tr0105.switchOffSignal2.value = false;
+  tr0206.switchOffSignal1.value = false;
   tr0206.switchOffSignal2.value = false;
   tr0311.switchOffSignal1.value = false;
+  tr0311.switchOffSignal2.value = false;
+  tr0410.switchOffSignal1.value = false;
   tr0410.switchOffSignal2.value = false;
   annotation(preferredView = "diagram",
     Diagram(coordinateSystem(extent = {{-300, -100}, {300, 100}})),

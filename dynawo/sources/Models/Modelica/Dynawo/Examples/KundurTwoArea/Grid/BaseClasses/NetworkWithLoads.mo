@@ -30,7 +30,7 @@ model NetworkWithLoads "Kundur two-area system with buses, lines and transformer
 
   parameter Types.ActivePowerPu P0PuLoad09;
   parameter Types.ReactivePowerPu Q0PuLoad09;
-  final parameter Types.ComplexApparentPowerPu s0PuLoad09 = Complex(P0PuLoad09, Q0PuLoad09)/Electrical.SystemBase.SnRef;
+  final parameter Types.ComplexApparentPowerPu s0PuLoad09 = Complex(P0PuLoad09, Q0PuLoad09);
   // shunt capacitors
   parameter Types.ReactivePowerPu Q0PuShunt07;
   final parameter Types.ComplexApparentPowerPu s0PuShunt07= Complex(0, Q0PuShunt07);
