@@ -32,12 +32,12 @@ model NetworkWithLoadsGenerators "Kundur two-area system with buses, lines and t
   parameter Types.Angle UAngle0Gen04;
   Dynawo.Electrical.Machines.Simplified.GeneratorPVFixed gen02(QGen0Pu = Q0PuGen02, PGen0Pu = P0PuGen02, U0Pu=U0PuGen02, u0Pu=Complex(U0PuGen02*Modelica.Math.cos(UAngle0Gen02), U0PuGen02*Modelica.Math.sin(UAngle0Gen02))) annotation(
     Placement(visible = true, transformation(origin = {-130, -48}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Machines.Simplified.GeneratorPVFixed gen03(QGen0Pu = Q0PuGen03, PGen0Pu = P0PuGen03, U0Pu=U0PuGen03, u0Pu=Complex(U0PuGen03*Modelica.Math.cos(UAngle0Gen03), U0PuGen03*Modelica.Math.sin(UAngle0Gen03))) annotation(
-    Placement(visible = true, transformation(origin = {130, -46}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Machines.Simplified.GeneratorPVFixed gen04(QGen0Pu = Q0PuGen04, PGen0Pu = P0PuGen04, U0Pu=U0PuGen04, u0Pu=Complex(U0PuGen04*Modelica.Math.cos(UAngle0Gen04), U0PuGen04*Modelica.Math.sin(UAngle0Gen04))) annotation(
-    Placement(visible = true, transformation(origin = {270, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Dynawo.Electrical.Buses.InfiniteBus slack01(UPhase = UAngle0Gen01, UPu = U0PuGen01)  annotation(
     Placement(visible = true, transformation(origin = {-260, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+  Dynawo.Electrical.Machines.Simplified.GeneratorPVFixed gen03(PGen0Pu = P0PuGen03, QGen0Pu = Q0PuGen03, U0Pu = U0PuGen03, u0Pu = Complex(U0PuGen03 * Modelica.Math.cos(UAngle0Gen03), U0PuGen03 * Modelica.Math.sin(UAngle0Gen03))) annotation(
+    Placement(visible = true, transformation(origin = {274, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Dynawo.Electrical.Machines.Simplified.GeneratorPVFixed gen04(PGen0Pu = P0PuGen04, QGen0Pu = Q0PuGen04, U0Pu = U0PuGen04, u0Pu = Complex(U0PuGen04 * Modelica.Math.cos(UAngle0Gen04), U0PuGen04 * Modelica.Math.sin(UAngle0Gen04))) annotation(
+    Placement(visible = true, transformation(origin = {130, -46}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
   gen02.switchOffSignal1.value = false;
   gen02.switchOffSignal2.value = false;
@@ -50,12 +50,12 @@ equation
   gen04.switchOffSignal3.value = false;
   connect(gen02.terminal, bus02.terminal) annotation(
     Line(points = {{-130, -48}, {-130, -20}}, color = {0, 0, 255}));
-  connect(gen03.terminal, bus04.terminal) annotation(
-    Line(points = {{130, -46}, {130, -20}}, color = {0, 0, 255}));
-  connect(bus03.terminal, gen04.terminal) annotation(
-    Line(points = {{240, 70}, {270, 70}}, color = {0, 0, 255}));
   connect(slack01.terminal, bus01.terminal) annotation(
     Line(points = {{-260, 70}, {-240, 70}}, color = {0, 0, 255}));
+  connect(gen04.terminal, bus04.terminal) annotation(
+    Line(points = {{130, -46}, {130, -20}}, color = {0, 0, 255}));
+  connect(bus03.terminal, gen03.terminal) annotation(
+    Line(points = {{240, 70}, {274, 70}}, color = {0, 0, 255}));
   annotation(
     Diagram,
     Icon);
