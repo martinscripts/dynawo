@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Components.TransformerWithControl;
+within KundurTwoArea.Components.TransformerWithControl;
 
 model TransformerWithControl "Model of transformer with variable tap, for the Nordic 32 test system"
   /*

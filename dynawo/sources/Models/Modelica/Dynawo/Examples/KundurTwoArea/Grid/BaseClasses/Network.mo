@@ -13,27 +13,27 @@ model Network "Kundur two-area system with buses, lines and transformers"
       * This file is part of Dynawo, an hybrid C++/Modelica open source suite
       * of simulation tools for power systems.
       */
-  Dynawo.Electrical.Buses.Bus bus01 annotation(
+  Dynawo.Electrical.Buses.Bus bus01(UNom = 20)  annotation(
     Placement(visible = true, transformation(origin = {-240, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus07 annotation(
+  Dynawo.Electrical.Buses.Bus bus07(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {-60, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus06 annotation(
+  Dynawo.Electrical.Buses.Bus bus06(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {-120, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus08 annotation(
+  Dynawo.Electrical.Buses.Bus bus08(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {0, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus11 annotation(
+  Dynawo.Electrical.Buses.Bus bus11(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {180, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus05 annotation(
+  Dynawo.Electrical.Buses.Bus bus05(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {-178, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus03 annotation(
+  Dynawo.Electrical.Buses.Bus bus03(UNom = 20)  annotation(
     Placement(visible = true, transformation(origin = {240, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Dynawo.Electrical.Buses.Bus bus10 annotation(
+  Dynawo.Electrical.Buses.Bus bus10(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {122, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   Dynawo.Electrical.Buses.Bus bus02 annotation(
     Placement(visible = true, transformation(origin = {-130, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Buses.Bus bus04 annotation(
+  Dynawo.Electrical.Buses.Bus bus04(UNom = 20)  annotation(
     Placement(visible = true, transformation(origin = {130, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Electrical.Buses.Bus bus09 annotation(
+  Dynawo.Electrical.Buses.Bus bus09(UNom = 230)  annotation(
     Placement(visible = true, transformation(origin = {60, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
   Dynawo.Electrical.Lines.Line line0506(BPu = bLinePu/2 * lengthLine0506Km, GPu = 0, RPu = rLinePu * lengthLine0506Km, XPu = xLinePu * lengthLine0506Km) annotation(
     Placement(visible = true, transformation(origin = {-148, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));

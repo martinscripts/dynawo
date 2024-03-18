@@ -13,7 +13,7 @@ model LoadFlow_mwe
       * This file is part of Dynawo, an hybrid C++/Modelica open source suite
       * of simulation tools for power systems.
       */
-  extends Dynawo.Examples.KundurTwoArea.Grid.BaseClasses_mwe.NetworkWithLoadsGenerators(
+  extends KundurTwoArea.Grid.BaseClasses_mwe.NetworkWithLoadsGenerators(
   P0PuGen01 = 7.0,
   Q0PuGen01 = -1.85,
   U0PuGen01 = 1.03,

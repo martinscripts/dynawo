@@ -13,7 +13,7 @@ model NetworkWithLoadsGenerators "Kundur two-area system with buses, lines and t
         * This file is part of Dynawo, an hybrid C++/Modelica open source suite
         * of simulation tools for power systems.
         */
-  extends Dynawo.Examples.KundurTwoArea.Grid.BaseClasses_mwe.NetworkWithLoads;
+  extends KundurTwoArea.Grid.BaseClasses_mwe.NetworkWithLoads;
   parameter Types.ReactivePowerPu P0PuGen01;
   parameter Types.ReactivePowerPu Q0PuGen01;
   parameter Types.VoltageModulePu U0PuGen01;

@@ -13,10 +13,10 @@ model NetworkWithLoads "Kundur two-area system with buses, lines and transformer
       * This file is part of Dynawo, an hybrid C++/Modelica open source suite
       * of simulation tools for power systems.
       */
-  extends Dynawo.Examples.KundurTwoArea.Grid.BaseClasses_mwe.Network;
-  Electrical.Loads.LoadZIP load07(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuLoad07, s0Pu = s0PuLoad07, u0Pu = Complex(1, 0)) annotation(
+  extends KundurTwoArea.Grid.BaseClasses_mwe.Network;
+  Dynawo.Electrical.Loads.LoadZIP load07(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuLoad07, s0Pu = s0PuLoad07, u0Pu = Complex(1, 0)) annotation(
     Placement(visible = true, transformation(origin = {-72, 36}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Electrical.Loads.LoadZIP shunt07(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuShunt07, s0Pu = s0PuShunt07, u0Pu = Complex(1, 0)) annotation(
+  Dynawo.Electrical.Loads.LoadZIP shunt07(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuShunt07, s0Pu = s0PuShunt07, u0Pu = Complex(1, 0)) annotation(
     Placement(visible = true, transformation(origin = {-51, 35}, extent = {{-11, -11}, {11, 11}}, rotation = 0)));
   // loads
   parameter Types.ActivePowerPu P0PuLoad07;

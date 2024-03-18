@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Components.TransformerWithControl;
+within KundurTwoArea.Components.TransformerWithControl;
 
 package BaseClasses "Base transformer models"
   /*

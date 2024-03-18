@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Components.TransformerWithControl;
+within KundurTwoArea.Components.TransformerWithControl;
 
 record TransformerParameters "Parameter sets for the transformers of the Nordic 32 test system"
   /*

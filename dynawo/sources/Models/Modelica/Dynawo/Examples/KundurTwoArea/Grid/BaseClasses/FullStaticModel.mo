@@ -1,6 +1,6 @@
 within Dynawo.Examples.KundurTwoArea.Grid.BaseClasses;
 
-model NetworkWithLoadsGenerators "Kundur two-area system with buses, lines and transformers, loads, shunts and generators."
+model FullStaticModel "Kundur two-area system with buses, lines and transformers, loads, shunts and generators."
   /*
       * Copyright (c) 2022, RTE (http://www.rte-france.com)
       * See AUTHORS.txt
@@ -13,7 +13,7 @@ model NetworkWithLoadsGenerators "Kundur two-area system with buses, lines and t
       * This file is part of Dynawo, an hybrid C++/Modelica open source suite
       * of simulation tools for power systems.
       */
-  extends Dynawo.Examples.KundurTwoArea.Grid.BaseClasses.NetworkWithLoads;
+  extends KundurTwoArea.Grid.BaseClasses.NetworkWithLoads;
   parameter Types.ReactivePowerPu P0PuGen01;
   parameter Types.ReactivePowerPu Q0PuGen01;
   parameter Types.VoltageModulePu U0PuGen01;
@@ -59,4 +59,4 @@ equation
   annotation(
     Diagram,
     Icon);
-end NetworkWithLoadsGenerators;
+end FullStaticModel;

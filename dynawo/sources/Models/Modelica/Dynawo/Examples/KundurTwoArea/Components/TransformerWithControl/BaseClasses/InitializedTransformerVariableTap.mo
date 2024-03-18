@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Components.TransformerWithControl.BaseClasses;
+within KundurTwoArea.Components.TransformerWithControl.BaseClasses;
 
 model InitializedTransformerVariableTap "Model of transformer with variable tap and built-in initialization, for the Nordic 32 test system"
   /*

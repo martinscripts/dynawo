@@ -1,3 +1,4 @@
 Network
 NetworkWithLoads
-NetworkWithLoadsGenerators
+FullStaticModel
+FullDynamicModel

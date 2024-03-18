@@ -44,9 +44,9 @@ model Network "Kundur two-area system with buses, lines and transformers"
   final parameter Types.ApparentPowerModule SRLine = 100 "Line rated power in MVA";
   Dynawo.Electrical.Transformers.TransformerFixedRatio tr0105(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
     Placement(visible = true, transformation(origin = {-208, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Electrical.Transformers.TransformerFixedRatio tr0206(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
+  Dynawo.Electrical.Transformers.TransformerFixedRatio tr0206(BPu = 0, GPu = 0, RPu = 0, XPu = xTrSystemBasePu, rTfoPu = 1) annotation(
     Placement(visible = true, transformation(origin = {-130, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-  Electrical.Buses.Bus bus02 annotation(
+  Dynawo.Electrical.Buses.Bus bus02 annotation(
     Placement(visible = true, transformation(origin = {-130, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
 //line_4032_4044.switchOffSignal1.value = false; // to be disconnected to clear short circuit
