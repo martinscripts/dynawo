@@ -108,7 +108,7 @@ equation
   annotation(
     Diagram,
     Icon,
-    experiment(StartTime = 0, StopTime = 0.01, Tolerance = 1e-06, Interval = 0.005),
+    experiment(StartTime = 0, StopTime = 0.263, Tolerance = 1e-06, Interval = 0.001),
     __OpenModelica_commandLineOptions = "--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian",
     __OpenModelica_simulationFlags(lv = "LOG_STATS", s = "dassl"));
 end ExampleB1;
