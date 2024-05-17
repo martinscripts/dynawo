@@ -13,7 +13,7 @@ model ExampleA "Kundur two-area system with buses, lines and transformers, loads
             * This file is part of Dynawo, an hybrid C++/Modelica open source suite
             * of simulation tools for power systems.
             */
-  extends KundurTwoArea.Grid.FullDynamicModel;
+  extends KundurTwoArea.Grid.FullDynamicModel(load07.Pp = 0, load07.Pq = 0, load07.Ip = 1, load07.Zq = 1, load09.Pp = 0, load09.Pq = 0, load09.Ip = 1, load09.Zq = 1);
   extends Icons.Example;
 equation
 //

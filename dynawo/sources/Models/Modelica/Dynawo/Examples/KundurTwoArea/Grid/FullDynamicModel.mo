@@ -13,7 +13,7 @@ model FullDynamicModel "Kundur two-area system with buses, lines and transformer
               * This file is part of Dynawo, an hybrid C++/Modelica open source suite
               * of simulation tools for power systems.
               */
-  extends KundurTwoArea.Grid.NetworkWithLoads(load07.Pp = 0, load07.Pq = 0, load07.Ip = 1, load07.Zq = 1, load09.Pp = 0, load09.Pq = 0, load09.Ip = 1, load09.Zq = 1);
+  extends KundurTwoArea.Grid.NetworkWithLoads;
   // constant active current
   // constant reactive impedance
   //
