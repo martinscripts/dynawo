@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Grid.BaseClasses;
+within Dynawo.Examples.KundurTwoArea.Grid;
 
 model NetworkWithLoads "Kundur two-area system with buses, lines and transformers, loads, shunts and generators."
   /*
@@ -13,28 +13,28 @@ model NetworkWithLoads "Kundur two-area system with buses, lines and transformer
     * This file is part of Dynawo, an hybrid C++/Modelica open source suite
     * of simulation tools for power systems.
     */
-  extends KundurTwoArea.Grid.BaseClasses.Network;
-  Dynawo.Electrical.Loads.LoadZIP load09(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, s0Pu = s0PuLoad09, u0Pu = Complex(1, 0), i0Pu = s0PuLoad09) annotation(
+  extends KundurTwoArea.Grid.Network;
+  Dynawo.Electrical.Loads.LoadZIP load09(Ip = 0, Iq = 0, Pp = 1, Pq = 1, Zp = 0, Zq = 0, s0Pu = s0PuLoad09, u0Pu = Complex(1, 0), i0Pu = s0PuLoad09) annotation(
     Placement(visible = true, transformation(origin = {72, 36}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Loads.LoadZIP shunt09(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuShunt09, s0Pu = s0PuShunt09, u0Pu = Complex(1, 0)) annotation(
+  Dynawo.Electrical.Loads.LoadZIP shunt09(Ip = 0, Iq = 0, Pp = 0, Pq = 0, Zp = 1, Zq = 1, i0Pu = s0PuShunt09, s0Pu = s0PuShunt09, u0Pu = Complex(1, 0)) annotation(
     Placement(visible = true, transformation(origin = {51, 37}, extent = {{-11, -11}, {11, 11}}, rotation = 0)));
-  Dynawo.Electrical.Loads.LoadZIP load07(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuLoad07, s0Pu = s0PuLoad07, u0Pu = Complex(1, 0)) annotation(
+  Dynawo.Electrical.Loads.LoadZIP load07(Ip = 0, Iq = 0, Pp = 1, Pq = 1, Zp = 0, Zq = 0, i0Pu = s0PuLoad07, s0Pu = s0PuLoad07, u0Pu = Complex(1, 0)) annotation(
     Placement(visible = true, transformation(origin = {-72, 36}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Dynawo.Electrical.Loads.LoadZIP shunt07(Ip = 1, Iq = 0, Pp = 0, Pq = 0, Zp = 0, Zq = 1, i0Pu = s0PuShunt07, s0Pu = s0PuShunt07, u0Pu = Complex(1, 0)) annotation(
+  Dynawo.Electrical.Loads.LoadZIP shunt07(Ip = 0, Iq = 0, Pp = 0, Pq = 0, Zp = 1, Zq = 1, i0Pu = s0PuShunt07, s0Pu = s0PuShunt07, u0Pu = Complex(1, 0)) annotation(
     Placement(visible = true, transformation(origin = {-51, 35}, extent = {{-11, -11}, {11, 11}}, rotation = 0)));
  // loads
-  parameter Types.ActivePowerPu P0PuLoad07;
-  parameter Types.ReactivePowerPu Q0PuLoad07;
+  parameter Types.ActivePowerPu P0PuLoad07 = 9.67;
+  parameter Types.ReactivePowerPu Q0PuLoad07 = 1.0;
   final parameter Types.ComplexApparentPowerPu s0PuLoad07 = Complex(P0PuLoad07, Q0PuLoad07);
 
-  parameter Types.ActivePowerPu P0PuLoad09;
-  parameter Types.ReactivePowerPu Q0PuLoad09;
+  parameter Types.ActivePowerPu P0PuLoad09 = 17.67;
+  parameter Types.ReactivePowerPu Q0PuLoad09 = 1.0;
   final parameter Types.ComplexApparentPowerPu s0PuLoad09 = Complex(P0PuLoad09, Q0PuLoad09);
   // shunt capacitors
-  parameter Types.ReactivePowerPu Q0PuShunt07;
+  parameter Types.ReactivePowerPu Q0PuShunt07 = -2.0;
   final parameter Types.ComplexApparentPowerPu s0PuShunt07= Complex(0, Q0PuShunt07);
 
-  parameter Types.ReactivePowerPu Q0PuShunt09;
+  parameter Types.ReactivePowerPu Q0PuShunt09 = -3.5;
   final parameter Types.ComplexApparentPowerPu s0PuShunt09 = Complex(0, Q0PuShunt09);
 
 equation

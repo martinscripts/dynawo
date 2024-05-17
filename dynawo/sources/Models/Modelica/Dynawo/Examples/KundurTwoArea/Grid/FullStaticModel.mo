@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Grid.BaseClasses;
+within Dynawo.Examples.KundurTwoArea.Grid;
 
 model FullStaticModel "Kundur two-area system with buses, lines and transformers, loads, shunts and generators."
   /*
@@ -13,23 +13,24 @@ model FullStaticModel "Kundur two-area system with buses, lines and transformers
       * This file is part of Dynawo, an hybrid C++/Modelica open source suite
       * of simulation tools for power systems.
       */
-  extends KundurTwoArea.Grid.BaseClasses.NetworkWithLoads;
-  parameter Types.ReactivePowerPu P0PuGen01;
-  parameter Types.ReactivePowerPu Q0PuGen01;
-  parameter Types.VoltageModulePu U0PuGen01;
-  parameter Types.Angle UAngle0Gen01;
-  parameter Types.ReactivePowerPu P0PuGen02;
-  parameter Types.ReactivePowerPu Q0PuGen02;
-  parameter Types.VoltageModulePu U0PuGen02;
-  parameter Types.Angle UAngle0Gen02;
-  parameter Types.ReactivePowerPu P0PuGen03;
-  parameter Types.ReactivePowerPu Q0PuGen03;
-  parameter Types.VoltageModulePu U0PuGen03;
-  parameter Types.Angle UAngle0Gen03;
-  parameter Types.ReactivePowerPu P0PuGen04;
-  parameter Types.ReactivePowerPu Q0PuGen04;
-  parameter Types.VoltageModulePu U0PuGen04;
-  parameter Types.Angle UAngle0Gen04;
+  extends KundurTwoArea.Grid.NetworkWithLoads;
+  parameter Types.ReactivePowerPu P0PuGen01 = 7.0;
+  parameter Types.ReactivePowerPu Q0PuGen01 = 1.85;
+  parameter Types.VoltageModulePu U0PuGen01 = 1.03;
+  parameter Types.Angle UAngle0Gen01 = 20.2 / 180 * Modelica.Constants.pi;
+  parameter Types.ReactivePowerPu P0PuGen02 = 7.0;
+  parameter Types.ReactivePowerPu Q0PuGen02 = 2.35;
+  parameter Types.VoltageModulePu U0PuGen02 = 1.01;
+  parameter Types.Angle UAngle0Gen02 = 10.5 / 180 * Modelica.Constants.pi;
+  parameter Types.ReactivePowerPu P0PuGen03 = 7.19;
+  parameter Types.ReactivePowerPu Q0PuGen03 = 1.76;
+  parameter Types.VoltageModulePu U0PuGen03 = 1.03;
+  parameter Types.Angle UAngle0Gen03 = -6.8 / 180 * Modelica.Constants.pi;
+  parameter Types.ReactivePowerPu P0PuGen04 = 7.0;
+  parameter Types.ReactivePowerPu Q0PuGen04 = 2.02;
+  parameter Types.VoltageModulePu U0PuGen04 = 1.01;
+  parameter Types.Angle UAngle0Gen04 = -17.6 / 180 * Modelica.Constants.pi;
+
   Dynawo.Electrical.Machines.Simplified.GeneratorPVFixed gen02(QGen0Pu = Q0PuGen02, PGen0Pu = P0PuGen02, U0Pu=U0PuGen02, u0Pu=Complex(U0PuGen02*Modelica.Math.cos(UAngle0Gen02), U0PuGen02*Modelica.Math.sin(UAngle0Gen02))) annotation(
     Placement(visible = true, transformation(origin = {-130, -48}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Dynawo.Electrical.Buses.InfiniteBus slack01(UPhase = UAngle0Gen01, UPu = U0PuGen01)  annotation(

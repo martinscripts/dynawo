@@ -1,4 +1,4 @@
-within Dynawo.Examples.KundurTwoArea.Grid.BaseClasses;
+within Dynawo.Examples.KundurTwoArea.Grid;
 
 model Network "Kundur two-area system with buses, lines and transformers"
   /*

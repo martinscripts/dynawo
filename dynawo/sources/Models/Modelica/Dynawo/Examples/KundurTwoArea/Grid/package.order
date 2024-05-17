@@ -1,4 +1,4 @@
-BaseClasses
-LoadFlow
-BaseClasses_mwe
-LoadFlow_mwe
+NetworkWithLoads
+Network
+FullStaticModel
+FullDynamicModel

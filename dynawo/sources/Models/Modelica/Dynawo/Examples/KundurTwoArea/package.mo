@@ -14,20 +14,15 @@ package KundurTwoArea "Kundur Two Area test system used for small signal stabili
   * of simulation tools for power systems.
   */
   
-    // generic import commands
-  import Complex "Complex numbers foundation class";
-  import Modelica;
-  import Modelica.ComplexMath "Complex numbers operators (+, - , *, exp, abs...)";
-  import Modelica.Icons;
-  import Dynawo;
-  import Dynawo.AdditionalIcons;
-  import Dynawo.Electrical.SystemBase;
-  import Dynawo.Types "Standard Dynawo variable types";
-
   extends Icons.Package;
   
+  
+
+
+
+
   annotation(
     uses(Modelica(version = "3.2.3")),
     preferredView = "info",
-    Documentation(info = "<html><head></head><body>This package contains the two-area test system described in Example 12.6 of Prabha Kundur's Power System Stability and Control.</body></html>"));
+    Documentation(info = "<html><head></head><body>This package contains the two-area test system described in Example 12.6 of Prabha Kundur's Power System Stability and Control.<div><br></div><div>Fom more information also see&nbsp;https://colib.net/testCases/.</div></body></html>"));
 end KundurTwoArea;
