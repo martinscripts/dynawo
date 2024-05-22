@@ -15,11 +15,9 @@ model ExampleB1 "Kundur two-area system with buses, lines and transformers, load
               */
   extends KundurTwoArea.Grid.FullDynamicModel;
   extends Icons.Example;
-  
-  
   // parameters for all AVRs
-   parameter Real AEx = Asat;
-   parameter Real BEx = Bsat;
+   parameter Real AEx = 0.0056;
+   parameter Real BEx = 1.075;
    parameter Real Ka = 20;
    parameter Real Ke = 1;
    parameter Real Kf = 0.125;
@@ -50,7 +48,6 @@ model ExampleB1 "Kundur two-area system with buses, lines and transformers, load
     Placement(visible = true, transformation(origin = {132, -78}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   //
   //
-
 equation
 //
 // gen01
@@ -58,7 +55,7 @@ equation
   gen01.omegaRefPu.value = 1;
   gen01.PmPu.value = gen01.Pm0Pu;
   gen01.UStatorPu.value = avr_gen01.UsPu;
-  //
+//
   avr_gen01.UsRefPu = avr_gen01.UsRef0Pu;
   avr_gen01.UOelPu = avr_gen01.UOel0Pu;
   avr_gen01.UPssPu = 0;
@@ -71,7 +68,7 @@ equation
   gen02.omegaRefPu.value = 1;
   gen02.PmPu.value = gen02.Pm0Pu;
   gen02.UStatorPu.value = avr_gen02.UsPu;
-  //
+//
   avr_gen02.UsRefPu = avr_gen02.UsRef0Pu;
   avr_gen02.UOelPu = avr_gen02.UOel0Pu;
   avr_gen02.UPssPu = 0;
@@ -84,7 +81,7 @@ equation
   gen03.omegaRefPu.value = 1;
   gen03.PmPu.value = gen03.Pm0Pu;
   gen03.UStatorPu.value = avr_gen03.UsPu;
-  //
+//
   avr_gen03.UsRefPu = avr_gen03.UsRef0Pu;
   avr_gen03.UOelPu = avr_gen03.UOel0Pu;
   avr_gen03.UPssPu = 0;
@@ -97,7 +94,7 @@ equation
   gen04.omegaRefPu.value = 1;
   gen04.PmPu.value = gen04.Pm0Pu;
   gen04.UStatorPu.value = avr_gen04.UsPu;
-  //
+//
   avr_gen04.UsRefPu = avr_gen04.UsRef0Pu;
   avr_gen04.UOelPu = avr_gen04.UOel0Pu;
   avr_gen04.UPssPu = 0;
@@ -108,7 +105,7 @@ equation
   annotation(
     Diagram,
     Icon,
-    experiment(StartTime = 0, StopTime = 0.263, Tolerance = 1e-06, Interval = 0.001),
+    experiment(StartTime = 0, StopTime = 0.25, Tolerance = 1e-06, Interval = 0.001),
     __OpenModelica_commandLineOptions = "--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian",
     __OpenModelica_simulationFlags(lv = "LOG_STATS", s = "dassl"));
 end ExampleB1;
