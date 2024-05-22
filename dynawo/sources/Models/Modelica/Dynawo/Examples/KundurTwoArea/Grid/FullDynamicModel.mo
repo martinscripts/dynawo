@@ -48,8 +48,8 @@ model FullDynamicModel "Kundur two-area system with buses, lines and transformer
   // Parameters for all generators
   parameter Dynawo.Electrical.Machines.OmegaRef.BaseClasses.GeneratorSynchronousParameters.ExcitationPuType ExcitationPu = Dynawo.Electrical.Machines.OmegaRef.BaseClasses.GeneratorSynchronousParameters.ExcitationPuType.Kundur;
   parameter Dynawo.Types.PerUnit Kd = 0;
-  parameter Dynawo.Types.ActivePower PNomAlt = SNom * 0.9;
-  parameter Dynawo.Types.ActivePower PNomTurb = PNomAlt;
+  parameter Dynawo.Types.ActivePower PNomAlt = 850;
+  parameter Dynawo.Types.ActivePower PNomTurb = 900;
   parameter Dynawo.Types.PerUnit RTfPu = 0;
   parameter Dynawo.Types.PerUnit RaPu = 0.0025;
   parameter Dynawo.Types.ApparentPowerModule SNom = 900;
