@@ -18,31 +18,31 @@ model FullDynamicModel "Kundur two-area system with buses, lines and transformer
   // constant reactive impedance
   //
   // Parameters gen01
-  parameter Types.ReactivePowerPu P0PuGen01 = -7.0;
-  parameter Types.ReactivePowerPu Q0PuGen01 = -1.85;
+  parameter Types.ReactivePowerPu P0PuGen01 = -7.00105;
+  parameter Types.ReactivePowerPu Q0PuGen01 = -1.85067;
   parameter Types.VoltageModulePu U0PuGen01 = 1.03;
   parameter Types.Angle UAngle0Gen01 = 20.2 / 180 * Modelica.Constants.pi;
   parameter Real HSecondsGen01 = 6.5;
   //
   // Parameters gen02
   parameter Types.ReactivePowerPu P0PuGen02 = -7.0;
-  parameter Types.ReactivePowerPu Q0PuGen02 = -2.35;
+  parameter Types.ReactivePowerPu Q0PuGen02 = -2.34676;
   parameter Types.VoltageModulePu U0PuGen02 = 1.01;
-  parameter Types.Angle UAngle0Gen02 = 10.5 / 180 * Modelica.Constants.pi;
+  parameter Types.Angle UAngle0Gen02 = 10.433 / 180 * Modelica.Constants.pi;
   parameter Real HSecondsGen02 = HSecondsGen01;
   //
   // Parameters gen03
   parameter Types.ReactivePowerPu P0PuGen03 = -7.19;
-  parameter Types.ReactivePowerPu Q0PuGen03 = -1.76;
+  parameter Types.ReactivePowerPu Q0PuGen03 = -1.75986;
   parameter Types.VoltageModulePu U0PuGen03 = 1.03;
-  parameter Types.Angle UAngle0Gen03 = -6.8 / 180 * Modelica.Constants.pi;
+  parameter Types.Angle UAngle0Gen03 = -6.88453 / 180 * Modelica.Constants.pi;
   parameter Real HSecondsGen03 = 6.175;
   //
   // Parameters gen04
   parameter Types.ReactivePowerPu P0PuGen04 = -7.0;
-  parameter Types.ReactivePowerPu Q0PuGen04 = -2.02;
+  parameter Types.ReactivePowerPu Q0PuGen04 = -2.02071;
   parameter Types.VoltageModulePu U0PuGen04 = 1.01;
-  parameter Types.Angle UAngle0Gen04 = -17.0 / 180 * Modelica.Constants.pi;
+  parameter Types.Angle UAngle0Gen04 = -17.0742 / 180 * Modelica.Constants.pi;
   parameter Real HSecondsGen04 = HSecondsGen03;
   //
   // Parameters for all generators
