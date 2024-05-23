@@ -56,7 +56,7 @@ equation
   gen01.PmPu.value = gen01.Pm0Pu;
   gen01.UStatorPu.value = avr_gen01.UsPu;
 //
-  avr_gen01.UsRefPu = avr_gen01.UsRef0Pu;
+  avr_gen01.UsRefPu = if time>stepTimeSeconds then avr_gen01.UsRef0Pu*(1+deltaU_gen01) else avr_gen01.UsRef0Pu;
   avr_gen01.UOelPu = avr_gen01.UOel0Pu;
   avr_gen01.UPssPu = 0;
   avr_gen01.USclOelPu = avr_gen01.USclOel0Pu;
@@ -69,7 +69,7 @@ equation
   gen02.PmPu.value = gen02.Pm0Pu;
   gen02.UStatorPu.value = avr_gen02.UsPu;
 //
-  avr_gen02.UsRefPu = avr_gen02.UsRef0Pu;
+  avr_gen02.UsRefPu = if time>stepTimeSeconds then avr_gen02.UsRef0Pu*(1+deltaU_gen02) else avr_gen02.UsRef0Pu;
   avr_gen02.UOelPu = avr_gen02.UOel0Pu;
   avr_gen02.UPssPu = 0;
   avr_gen02.USclOelPu = avr_gen02.USclOel0Pu;
@@ -82,7 +82,7 @@ equation
   gen03.PmPu.value = gen03.Pm0Pu;
   gen03.UStatorPu.value = avr_gen03.UsPu;
 //
-  avr_gen03.UsRefPu = avr_gen03.UsRef0Pu;
+  avr_gen03.UsRefPu = if time>stepTimeSeconds then avr_gen03.UsRef0Pu*(1+deltaU_gen03) else avr_gen03.UsRef0Pu;
   avr_gen03.UOelPu = avr_gen03.UOel0Pu;
   avr_gen03.UPssPu = 0;
   avr_gen03.USclOelPu = avr_gen03.USclOel0Pu;
@@ -95,7 +95,7 @@ equation
   gen04.PmPu.value = gen04.Pm0Pu;
   gen04.UStatorPu.value = avr_gen04.UsPu;
 //
-  avr_gen04.UsRefPu = avr_gen04.UsRef0Pu;
+  avr_gen04.UsRefPu = if time>stepTimeSeconds then avr_gen04.UsRef0Pu*(1+deltaU_gen04) else avr_gen04.UsRef0Pu;
   avr_gen04.UOelPu = avr_gen04.UOel0Pu;
   avr_gen04.UPssPu = 0;
   avr_gen04.USclOelPu = avr_gen04.USclOel0Pu;
@@ -105,7 +105,7 @@ equation
   annotation(
     Diagram,
     Icon,
-    experiment(StartTime = 0, StopTime = 0.25, Tolerance = 1e-06, Interval = 0.001),
-    __OpenModelica_commandLineOptions = "--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian",
+    experiment(StartTime = 0, StopTime = 10, Tolerance = 1e-06, Interval = 0.001),
+    __OpenModelica_commandLineOptions = "--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian --daeMode",
     __OpenModelica_simulationFlags(lv = "LOG_STATS", s = "dassl"));
 end ExampleB1;
