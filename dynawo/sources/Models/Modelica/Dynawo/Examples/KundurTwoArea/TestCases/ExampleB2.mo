@@ -20,28 +20,21 @@ model ExampleB2 "Kundur two-area system with buses, lines and transformers, load
   parameter Types.Time tRSeconds = 0.01;
   parameter Types.PerUnit vIMaxPu = 99;
   parameter Types.PerUnit vIMinPu = -99;
-  parameter Types.Time tCSeconds = 1e-6;
-  parameter Types.Time tBSeconds = 1e-6;
-  parameter Types.Time tC1Seconds = 1e-6;
-  parameter Types.Time tB1Seconds = 1e-6;
+  parameter Types.Time tCSeconds = 1e-9;
+  parameter Types.Time tBSeconds = 1e-9;
+  parameter Types.Time tC1Seconds = 1e-9;
+  parameter Types.Time tB1Seconds = 1e-9;
   parameter Types.PerUnit kAPu = 200;
-  parameter Types.Time tASeconds = 1e-6;
+  parameter Types.Time tASeconds = 1e-9;
   parameter Types.PerUnit vAMaxPu = 4;
   parameter Types.PerUnit vAMinPu = -4;
   parameter Types.PerUnit vRMaxPu = 4;
   parameter Types.PerUnit vRMinPu = -4;
-  parameter Types.PerUnit kCPu = 1e-6;
-  parameter Types.PerUnit kFPu = 1e-6;
+  parameter Types.PerUnit kCPu = 1e-9;
+  parameter Types.PerUnit kFPu = 1e-9;
   parameter Types.Time tFSeconds = 1;
-  parameter Types.PerUnit kLrPu = 1e-6;
+  parameter Types.PerUnit kLrPu = 1e-9;
   parameter Types.PerUnit iLrPu = 3;
-  //
-  // voltage reference signals for stepping
-  parameter Real deltaU_gen01 = +0.03;
-  parameter Real deltaU_gen02 = -0.01;
-  parameter Real deltaU_gen03 = -0.03;
-  parameter Real deltaU_gen04 = +0.01;
-  parameter Types.Time stepTimeSeconds = 1;
   //
   // avr01
   Dynawo.Electrical.Controls.Machines.VoltageRegulators.Standard.St1a avr_gen01(
@@ -209,7 +202,7 @@ equation
   annotation(
     Diagram,
     Icon,
-    experiment(StartTime = 0, StopTime = 20, Tolerance = 1e-03, Interval = 0.001),
-    __OpenModelica_commandLineOptions = "--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian --daeMode",
+    experiment(StartTime = 0, StopTime = 10, Tolerance = 1e-06, Interval = 0.0001),
+    __OpenModelica_commandLineOptions = "--matchingAlgorithm=PFPlusExt --indexReductionMethod=dynamicStateSelection -d=initialization,NLSanalyticJacobian",
     __OpenModelica_simulationFlags(lv = "LOG_STATS", s = "dassl"));
 end ExampleB2;
