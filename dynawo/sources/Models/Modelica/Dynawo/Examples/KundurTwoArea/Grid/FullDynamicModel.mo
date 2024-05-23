@@ -78,9 +78,12 @@ model FullDynamicModel "Kundur two-area system with buses, lines and transformer
   parameter Real Asat = 0.015;
   parameter Real Bsat = 9.6;
   //
-  // parameters for all AVRs
-  parameter Real efdPu = 1;
-  // random guess for constant field voltage
+  // voltage reference steps to excite modes
+  parameter Real deltaU_gen01 = +0.03;
+  parameter Real deltaU_gen02 = -0.01;
+  parameter Real deltaU_gen03 = -0.03;
+  parameter Real deltaU_gen04 = +0.01;
+  parameter Types.Time stepTimeSeconds = 1;
   //
   // gen01
   Dynawo.Examples.BaseClasses.InitializedGeneratorSynchronousFourWindings gen01(DPu = Kd, ExcitationPu = ExcitationPu, H = HSecondsGen01, P0Pu = P0PuGen01, PNomAlt = PNomAlt, PNomTurb = PNomTurb, Q0Pu = Q0PuGen01, RTfPu = RTfPu, RaPu = RaPu, SNom = SNom, SnTfo = SnTfo, State0 = Dynawo.Electrical.Constants.state.Closed1, SwitchOffSignal10 = false, Tpd0 = Tpd0, Tppd0 = Tppd0, Tppq0 = Tppq0, Tpq0 = Tpq0, U0Pu = U0PuGen01, UBaseHV = UBaseHV, UBaseLV = UBaseLV, UNom = UNom, UNomHV = UNomHV, UNomLV = UNomLV, UPhase0 = UAngle0Gen01, XTfPu = XTfPu, XdPu = XdPu, XlPu = XlPu, XpdPu = XpdPu, XppdPu = XppdPu, XppqPu = XppqPu, XpqPu = XpqPu, XqPu = XqPu, md = md, mq = mq, nd = nd, nq = nq) annotation(
@@ -120,6 +123,7 @@ equation
   gen04.switchOffSignal1.value = false;
   gen04.switchOffSignal2.value = false;
   gen04.switchOffSignal3.value = false;
+//
 //
   connect(gen02.terminal, bus02.terminal) annotation(
     Line(points = {{-128, -42}, {-130, -42}, {-130, -20}}, color = {0, 0, 255}));
