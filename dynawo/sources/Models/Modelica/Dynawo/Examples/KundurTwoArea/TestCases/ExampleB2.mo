@@ -38,14 +38,14 @@ model ExampleB2 "Kundur two-area system with buses, lines and transformers, load
   //
   // avr01
   Dynawo.Electrical.Controls.Machines.VoltageRegulators.Standard.St1a avr_gen01(
-    Us0Pu=gen01.UStator0Pu,
+    
     Efd0Pu=gen01.Efd0Pu,
-    Ir0Pu=gen01.If0Pu,
     IlrPu=iLrPu,
+    Ir0Pu=gen01.If0Pu,
     Ka=kAPu,
     Kc=kCPu,
     Kf=kFPu,
-    Klr=kLrPu, PositionPss = 0, PositionUel = 0,
+    Klr=kLrPu, PositionPss = 0, PositionUel = 0, UOel0Pu = 99,Us0Pu=gen01.UStator0Pu,
     VaMaxPu=vAMaxPu, 
     VaMinPu=vAMinPu, 
     ViMaxPu=vIMaxPu, 
@@ -64,14 +64,14 @@ model ExampleB2 "Kundur two-area system with buses, lines and transformers, load
   //
   // avr02
   Dynawo.Electrical.Controls.Machines.VoltageRegulators.Standard.St1a avr_gen02(
-    Us0Pu=gen02.UStator0Pu,
+    
     Efd0Pu=gen02.Efd0Pu,
-    Ir0Pu=gen02.If0Pu,
     IlrPu=iLrPu,
+    Ir0Pu=gen02.If0Pu,
     Ka=kAPu,
     Kc=kCPu,
     Kf=kFPu,
-    Klr=kLrPu, PositionPss = 0, PositionUel = 0,
+    Klr=kLrPu, PositionPss = 0, PositionUel = 0, UOel0Pu = 99,Us0Pu=gen02.UStator0Pu,
     VaMaxPu=vAMaxPu, 
     VaMinPu=vAMinPu, 
     ViMaxPu=vIMaxPu, 
@@ -90,14 +90,14 @@ model ExampleB2 "Kundur two-area system with buses, lines and transformers, load
   //
   // avr03
   Dynawo.Electrical.Controls.Machines.VoltageRegulators.Standard.St1a avr_gen03(
-    Us0Pu=gen03.UStator0Pu,
+    
     Efd0Pu=gen03.Efd0Pu,
-    Ir0Pu=gen03.If0Pu,
     IlrPu=iLrPu,
+    Ir0Pu=gen03.If0Pu,
     Ka=kAPu,
     Kc=kCPu,
     Kf=kFPu,
-    Klr=kLrPu, PositionPss = 0, PositionUel = 0,
+    Klr=kLrPu, PositionPss = 0, PositionUel = 0, UOel0Pu = 99,Us0Pu=gen03.UStator0Pu,
     VaMaxPu=vAMaxPu, 
     VaMinPu=vAMinPu, 
     ViMaxPu=vIMaxPu, 
@@ -116,14 +116,14 @@ model ExampleB2 "Kundur two-area system with buses, lines and transformers, load
   //
   // avr04
   Dynawo.Electrical.Controls.Machines.VoltageRegulators.Standard.St1a avr_gen04(
-    Us0Pu=gen04.UStator0Pu,
+    
     Efd0Pu=gen04.Efd0Pu,
-    Ir0Pu=gen04.If0Pu,
     IlrPu=iLrPu,
+    Ir0Pu=gen04.If0Pu,
     Ka=kAPu,
     Kc=kCPu,
     Kf=kFPu,
-    Klr=kLrPu, PositionPss = 0, PositionUel = 0,
+    Klr=kLrPu, PositionPss = 0, PositionUel = 0, UOel0Pu = 99,Us0Pu=gen04.UStator0Pu,
     VaMaxPu=vAMaxPu, 
     VaMinPu=vAMinPu, 
     ViMaxPu=vIMaxPu, 
