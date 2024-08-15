@@ -17,7 +17,7 @@ model ExampleB2 "Kundur two-area system with buses, lines and transformers, load
   extends Icons.Example;
   //
   // parameters for all AVRs
-  parameter Types.Time tRSeconds = 0.01;
+  parameter Types.Time tRSeconds = 1e-6;
   parameter Types.PerUnit vIMaxPu = 99;
   parameter Types.PerUnit vIMinPu = -99;
   parameter Types.Time tCSeconds = 1e-9;

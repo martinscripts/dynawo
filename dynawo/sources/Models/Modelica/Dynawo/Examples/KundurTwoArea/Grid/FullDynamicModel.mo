@@ -71,9 +71,9 @@ model FullDynamicModel "Kundur two-area system with buses, lines and transformer
   parameter Dynawo.Types.PerUnit XpqPu = 0.55;
   parameter Dynawo.Types.PerUnit XppdPu = 0.25;
   parameter Dynawo.Types.PerUnit XppqPu = 0.25;
-  parameter Real md = 0.105*0.5;//0.105;
-  parameter Real mq = 0.134*0.5;//0.134;
-  parameter Real nd = 10;//7.72;
+  parameter Real md = 1;//0.105;
+  parameter Real mq = 1;//0.134;
+  parameter Real nd = 9;//7.72;
   parameter Real nq = 9;//6.24;
   // parameter Real Asat = 0.015;
   // parameter Real Bsat = 9.6;
